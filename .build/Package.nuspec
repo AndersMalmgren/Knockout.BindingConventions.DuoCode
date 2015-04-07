@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Knockout.BindingConventions.DuoCode</id>
+    <version>1.0</version>
+    <authors>Anders Malmgren</authors>
+    <owners>Anders Malmgren</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/AndersMalmgren/Knockout.BindingConventions.DuoCode</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A DuoCode Binding for the Knockout.BindingConventions library</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Knockout MVVM Binding Convention MVC ViewModel Presentation Model-View-ViewModel Caliburn DuoCode C#</tags>
+    <dependencies>
+      <!--<dependency id="Knockout.BindingConventions" version="1.4.112" />-->
+    </dependencies>
+  </metadata>
+</package>
