@@ -28,8 +28,17 @@ namespace Knockout.BindingConventions.DuoCode
 
         private void HandleNext()
         {
+            enumerator.Current.Completed += Current_Completed;
             enumerator.Current.Execute(context);
-            MoveNext();
+        }
+
+        private void Current_Completed(object sender, ResultCompletionEventArgs e)
+        {
+            enumerator.Current.Completed -= Current_Completed;
+            if (!e.WasCancelled)
+            {
+                MoveNext();
+            }
         }
     }
 }
