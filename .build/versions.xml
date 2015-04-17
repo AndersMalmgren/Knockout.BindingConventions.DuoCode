@@ -1,7 +1,7 @@
 <ArrayOfVersion xmlns="http://schemas.datacontract.org/2004/07/GitVersionInfo.Model" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <Version>
-    <GitRevCount>0</GitRevCount>
+    <GitRevCount>5</GitRevCount>
     <Major>0</Major>
-    <Minor>1</Minor>
+    <Minor>2</Minor>
   </Version>  
 </ArrayOfVersion>
