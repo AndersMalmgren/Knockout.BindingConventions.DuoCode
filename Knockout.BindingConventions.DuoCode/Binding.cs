@@ -12,6 +12,11 @@ namespace Knockout.BindingConventions.DuoCode
     {
         public static void Init()
         {
+            Js.referenceAs<Action<object>>(@"(function(viewLocator) {
+            ko.bindingConventions.viewLocator.instance = viewLocator;
+                                                      })")
+                (new ViewLocator());
+
             Js.referenceAs<Action<Func<Func<IEnumerable<IResult>>, HTMLElement, BindingContext, Action>>>(@"(function(factory) {
     var orgApply = ko.bindingConventions.conventionBinders.button.apply;
     ko.bindingConventions.conventionBinders.button.apply = function(name, element, bindings, unwrapped, type, dataFn, bindingContext) {
