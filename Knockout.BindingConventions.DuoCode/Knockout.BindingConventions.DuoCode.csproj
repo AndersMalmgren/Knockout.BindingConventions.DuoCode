@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B69E7DEA-4C7D-4FCB-AE7A-F84B8353AE12}</ProjectGuid>
+    <ProjectGuid>{732661B6-2A27-488A-B5B1-EA2F2D575139}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Knockout.BindingConventions.DuoCode</RootNamespace>
