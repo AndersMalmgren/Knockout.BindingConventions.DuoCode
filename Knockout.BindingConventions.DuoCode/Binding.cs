@@ -20,7 +20,7 @@ namespace Knockout.BindingConventions.DuoCode
             Js.referenceAs<Action<Func<Func<IEnumerable<IResult>>, HTMLElement, BindingContext, Action>>>(@"(function(factory) {
     var orgApply = ko.bindingConventions.conventionBinders.button.apply;
     ko.bindingConventions.conventionBinders.button.apply = function(name, element, bindings, unwrapped, type, dataFn, bindingContext) {
-        var handler = factory(unwrapped, element, bindingContext);
+        var handler = factory(unwrapped.bind(bindingContext.$data), element, bindingContext);
 
         dataFn = function() { return handler };
         orgApply(name, element, bindings, handler, type, dataFn, bindingContext);
