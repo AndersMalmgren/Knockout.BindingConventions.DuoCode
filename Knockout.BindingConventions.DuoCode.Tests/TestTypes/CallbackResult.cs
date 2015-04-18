@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Knockout.BindingConventions.DuoCode.Tests.TestTpes
+namespace Knockout.BindingConventions.DuoCode.Tests.TestTypes
 {
 	public class CallbackResult : Result
 	{

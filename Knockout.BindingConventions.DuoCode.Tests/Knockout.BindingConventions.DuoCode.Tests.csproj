@@ -33,16 +33,18 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TestTpes\CallbackResult.cs" />
+    <Compile Include="EventTests.cs" />
+    <Compile Include="TestTypes\CallbackResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="qunit.d.cs" />
-    <Compile Include="TestTpes\ClickHandlerViewModel.cs" />
-    <Compile Include="TestTpes\Result.cs" />
-    <Compile Include="TestTpes\StateMachineViewModel.cs" />
+    <Compile Include="TestTypes\ClickHandlerViewModel.cs" />
+    <Compile Include="TestTypes\EventViewModel.cs" />
+    <Compile Include="TestTypes\Result.cs" />
+    <Compile Include="TestTypes\StateMachineViewModel.cs" />
     <Compile Include="TestAttributes.cs" />
     <Compile Include="TestHelper.cs" />
     <Compile Include="TestRunner.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="ButtonTests.cs" />
     <Content Include="console.css" />
     <Content Include="index.html" />
     <Content Include="qunit.css" />

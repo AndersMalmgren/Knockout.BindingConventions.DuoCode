@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using DuoCode.Runtime;
-using Knockout.BindingConventions.DuoCode.Tests.TestTpes;
+using Knockout.BindingConventions.DuoCode.Tests.TestTypes;
 
 namespace Knockout.BindingConventions.DuoCode.Tests
 {

@@ -17,22 +17,37 @@ namespace Knockout.BindingConventions.DuoCode
                                                       })")
                 (new ViewLocator());
 
-            Js.referenceAs<Action<Func<Func<IEnumerable<IResult>>, HTMLElement, BindingContext, Action>>>(@"(function(factory) {
+			Js.referenceAs<Action<Func<Func<IEnumerable<IResult>>, HTMLElement, BindingContext, Func<bool>>>>(@"(function(factory) {
     var orgApply = ko.bindingConventions.conventionBinders.button.apply;
     ko.bindingConventions.conventionBinders.button.apply = function(name, element, bindings, unwrapped, type, dataFn, bindingContext) {
         var handler = factory(unwrapped.bind(bindingContext.$data), element, bindingContext);
 
         dataFn = function() { return handler };
         orgApply(name, element, bindings, handler, type, dataFn, bindingContext);
-
     };
 })")
-                (InitButtonHandler);
+                (InitActionMethodHandler);
 
 
+			Js.referenceAs<Action<Func<Func<IEnumerable<IResult>>, HTMLElement, BindingContext, Func<bool>>>>(@"(function(factory) {
+	ko.bindingHandlers.attach = {
+		init: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+			var events = valueAccessor()
+			for(var name in events) {
+				events[name] = factory(events[name].bind(viewModel), element, bindingContext);
+			}
+			
+			valueAccessor = function() {
+				return events;
+			};
+			
+			ko.bindingHandlers.event.init(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext);
+		}
+	};
+})")(InitActionMethodHandler);
         }
 
-        public static Action InitButtonHandler(Func<IEnumerable<IResult>> handler, HTMLElement element, BindingContext bindingContext)
+        public static Func<bool> InitActionMethodHandler(Func<IEnumerable<IResult>> handler, HTMLElement element, BindingContext bindingContext)
         {
             return () =>
             {
@@ -44,6 +59,7 @@ namespace Knockout.BindingConventions.DuoCode
                     iterator.Execute();
                 }
 
+	            return true;
             };
         }
     }

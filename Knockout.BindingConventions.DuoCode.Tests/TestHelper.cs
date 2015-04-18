@@ -25,7 +25,14 @@ namespace Knockout.BindingConventions.DuoCode.Tests
 		[Js(Name = "click")]
 		public extern void Click(Action handler);
 
+		[Js(Name = "keydown")]
+		public extern void KeyDown();
+
+
 		[Js(Name = "is")]
 		public extern bool Is(string selector);
+
+		[Js(Name = "attr")]
+		public extern bool Attribute(string name, string value);
 	}
 }
