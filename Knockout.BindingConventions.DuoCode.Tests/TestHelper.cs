@@ -34,5 +34,23 @@ namespace Knockout.BindingConventions.DuoCode.Tests
 
 		[Js(Name = "attr")]
 		public extern bool Attribute(string name, string value);
+
+        [Js(Name = "parent")]
+	    public extern JquerySelector Parent();
+
+        [Js(Name = "html")]
+        public extern void Html(string html);
+
+        [Js(Name = "html")]
+        public extern string Html();
+
+        [Js(Name = "append")]
+	    public extern JquerySelector Append(JquerySelector content);
+
+        [Js(Name = "appendTo")]
+        public extern JquerySelector AppendTo(JquerySelector content);
+
+        [Js(Name = "remove")]
+        public extern void Remove();
 	}
 }

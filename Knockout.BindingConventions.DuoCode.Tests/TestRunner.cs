@@ -52,9 +52,12 @@ namespace Knockout.BindingConventions.DuoCode.Tests
 		{
 			this.element = element;
 			this.clean = clean;
+
+            Selector = Js.referenceAs<Func<string, JquerySelector>>("$");
 		}
 
 		public JquerySelector Element { get { return element; } }
+        public Func<string, JquerySelector> Selector { get; private set; } 
 
 		public void Dispose()
 		{
