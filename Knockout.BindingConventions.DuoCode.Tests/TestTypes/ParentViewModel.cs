@@ -5,13 +5,13 @@ using System.Web;
 
 namespace Knockout.BindingConventions.DuoCode.Tests.TestTypes
 {
-    public class ParentViewModel
+    public class ParentViewModel<TSubModel>
     {
-        private readonly SubViewModel subView;
+        private readonly TSubModel subView;
 
-        public ParentViewModel()
+        public ParentViewModel(TSubModel model)
         {
-            subView = new SubViewModel();
+            subView = model;
         }
     }
 }
